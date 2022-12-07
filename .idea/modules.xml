@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/BasicsOfJava.iml" filepath="$PROJECT_DIR$/.idea/BasicsOfJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c_Object/c_Object.iml" filepath="$PROJECT_DIR$/c_Object/c_Object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/d_Exception/d_Exception.iml" filepath="$PROJECT_DIR$/d_Exception/d_Exception.iml" />
+    </modules>
+  </component>
+</project>
