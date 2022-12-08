@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BasicsOfJava.iml" filepath="$PROJECT_DIR$/.idea/BasicsOfJava.iml" />
-      <module fileurl="file://$PROJECT_DIR$/c_Object/c_Object.iml" filepath="$PROJECT_DIR$/c_Object/c_Object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c_ObjectClass/c_ObjectClass.iml" filepath="$PROJECT_DIR$/c_ObjectClass/c_ObjectClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/d_Exception/d_Exception.iml" filepath="$PROJECT_DIR$/d_Exception/d_Exception.iml" />
     </modules>
   </component>
