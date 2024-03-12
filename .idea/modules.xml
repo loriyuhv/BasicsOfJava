@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/BasicsOfJava.iml" filepath="$PROJECT_DIR$/.idea/BasicsOfJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/c_ObjectClass/c_ObjectClass.iml" filepath="$PROJECT_DIR$/c_ObjectClass/c_ObjectClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/d_Exception/d_Exception.iml" filepath="$PROJECT_DIR$/d_Exception/d_Exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e_Thread/e_Thread.iml" filepath="$PROJECT_DIR$/e_Thread/e_Thread.iml" />
     </modules>
   </component>
 </project>
