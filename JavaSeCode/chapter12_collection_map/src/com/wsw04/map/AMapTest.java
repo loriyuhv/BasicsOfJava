@@ -2,10 +2,7 @@ package com.wsw04.map;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author loriyuhv
@@ -48,5 +45,27 @@ public class AMapTest {
         System.out.println(map1);
     }
 
+    @Test
+    public void test4() {
+        Map map = new TreeMap();
+        map.put(8, "Jerry");
+        map.put(7, "Tom");
+        map.put(6, "Alice");
+        map.put(3, "Bob");
+        map.put(5, "Alan");
+        map.put(15, "Linus");
+        map.put(12, "Windows");
+        // {3=Bob, 5=Alan, 6=Alice, 7=Tom, 8=Jerry, 12=Windows, 15=Linux}
+        // {3=Bob, 5=Alan, 6=Alice, 7=Tom, 8=Jerry, 12=Windows, 15=Linus}
+        System.out.println(map);
+
+        String i = new String("AAAAAAAA");
+        String i2 = new String("BBBBBBBB");
+        int i1 = i.hashCode();
+        int i3 = i2.hashCode();
+        System.out.println(i1);
+        System.out.println(i3);
+
+    }
 
 }
