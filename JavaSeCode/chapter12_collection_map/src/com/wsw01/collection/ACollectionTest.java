@@ -1,6 +1,5 @@
 package com.wsw01.collection;
 
-import com.wsw02.list.AListTest;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -40,11 +39,6 @@ class Person {
         if (!(o instanceof Person person)) return false;
         return age == person.age && Objects.equals(name, person.name);
     }
-
-    //    @Override
-    //    public int hashCode() {
-    //        return Objects.hash(name, age);
-    //    }
 }
 
 public class ACollectionTest {

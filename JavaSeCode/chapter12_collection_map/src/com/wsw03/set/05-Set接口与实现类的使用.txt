@@ -25,3 +25,9 @@ java.util.Collection: 存储一个一个的数据
     > 不可重复性：添加到Set中的元素是不能相同的。
             比较的标准：需要判断hashCode()得到的哈希值以及equals()得到的boolean型的结果。
             哈希值相同且equals()返回true，则认为元素是相同的。
+
+5. 添加到HashSet/LinkedHashSet中元素的要求：
+    要求元素所在的类要重写两个方法：equals()和hashCode()。
+    同时，要求equals()和hashCode()要保持一致性！我们只需要在IDEA中自动生成两个方法的重写即可，即能保证两个方法的一致性。
+
+6. TreeSet的使用
