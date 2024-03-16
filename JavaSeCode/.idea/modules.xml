@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaSeCode.iml" filepath="$PROJECT_DIR$/JavaSeCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter12_collection_map/chapter12_collection_map.iml" filepath="$PROJECT_DIR$/chapter12_collection_map/chapter12_collection_map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter13_generic_teacher/chapter13_generic_teacher.iml" filepath="$PROJECT_DIR$/chapter13_generic_teacher/chapter13_generic_teacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter14_generic_teacher/chapter14_generic_teacher.iml" filepath="$PROJECT_DIR$/chapter14_generic_teacher/chapter14_generic_teacher.iml" />
+    </modules>
+  </component>
+</project>
