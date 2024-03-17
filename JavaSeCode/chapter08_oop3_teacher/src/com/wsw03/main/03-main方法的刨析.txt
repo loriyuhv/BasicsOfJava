@@ -1,0 +1,16 @@
+main()方法的刨析
+public static void main(String[] args){}
+
+1.
+    理解1：看做是一个普通的静态方法
+    理解2：看做是程序的入口，格式是固定的。
+2. 与控制台的交互
+    如何从键盘获取数据？
+        >方式1：使用Scanner
+        >方式2：使用main()的形参进行传值。
+            >> 测试1：使用cmd（记得import "包路径";去除 ）
+                javac BMainDemo.java
+                java BMainDemo "Jerry" 88 Tom true
+            >> 测试2：使用Idea中的Run->Edit Configurations;
+                Main Class：com.wsw03.main.BMainDemo
+                Program arguments："Jerry" 88 Tom true
