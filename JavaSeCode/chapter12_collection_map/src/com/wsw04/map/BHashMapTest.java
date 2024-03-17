@@ -113,12 +113,14 @@ public class BHashMapTest {
         map.put("BB", 78);
         map.put("person1", new Person("Jerry", 18));
         System.out.println(map);
+
         //遍历key集合：Set keySet()
         Set set = map.keySet();
         for(Object obj : set) {
             System.out.println(obj);
         }
         System.out.println("-------------------");
+
         //遍历value集合：Collection values()
         Collection values = map.values();
         Iterator iterator = values.iterator();
@@ -126,6 +128,7 @@ public class BHashMapTest {
             System.out.println(iterator.next());
         }
         System.out.println("-------------------");
+
         //遍历entry集合：Set entrySet()
         Set set1 = map.entrySet();
         Iterator iterator1 = set1.iterator();
@@ -151,21 +154,6 @@ public class BHashMapTest {
         for(Object a : set1) {
             System.out.println(a);
         }
-    }
-
-    @Test
-    public void test3() {
-
-    }
-
-    @Test
-    public void test4() {
-
-    }
-
-    @Test
-    public void test5() {
-
     }
 
 }

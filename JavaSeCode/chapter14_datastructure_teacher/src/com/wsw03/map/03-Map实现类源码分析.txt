@@ -1,0 +1,51 @@
+
+1. HashMap中元素的特点
+    > HashMap中的所有的key彼此之间是不可重复的、无序的。所有的key就构成一个Set集合。 --> key所在的类要重写hashCode()和equals()
+    > HashMap中的所有的value彼此之间是可重复的、无序的。所有的value就构成一个Collection集合。--> value所在的类要重写equals()
+    > HashMap中的一个key-value, 就构成一个Entry。
+    > HashMap中的所有的entry彼此之间是不可重复的、无序的。所有的entry就构成一个Set集合。
+
+2. HashMap源码分析
+2.1 JDK7中创建对象和添加数据过程（以JDK1.7.0_07为例说明）:
+    HashMap<String, Integer> map = new HashMap<>();
+    map.put("Jerry", 78);
+
+    >> 创建对象的过程中，底层会初始化数组。Entry[] table = new Entry[16];
+        HashMap<String, Integer> map = new HashMap<>();
+
+    >> 添加/修改的过程："Jerry"和78封装到一个Entry对象中，将此对象添加到table数组中。
+        map.put("Jerry", 78);
+
+    >> 将(key1, value1)添加到当前的map中：
+        >>> int hash = hash(key.hashCode());
+            首先，需要调用key1所在类的hashCode()方法，计算key1对应的哈希值1，
+                此哈希值1经过某种算法（哈希值1）之后，得到哈希值2；
+
+        >>> int i = indexFor(hash, table.length);
+            然后哈希值2再经过某种算法（indexFor()）之后，就确定了(key1, value1)
+                其在数组table中的索引位置i；
+        >>>
+        1.1 如果此索引位置i的数组上没有元素，则(key1, value1)添加成功。 ====>情况1
+        1.2 如果此索引位置i的数组上有元素(key2, value2)，则需要继续比较key1和key2的
+                哈希值2：--> 哈希冲突
+            2.1 如果key1的哈希值2与key2的哈希值2不相同，则(key1, value1)添加成功。---->情况2
+            2.2 如果key1的哈希值2与key2的哈希值2相同，则需要继续比较key1和key2的equals()。
+                    要调用key1所在类的equals()，将key2作为参数传递进去。
+               3.1 调用equals()，返回false:则(key1，value1)添加成功。 ---->情况3
+               3.2 调用equals()，返回true: 则认为key1和key2是相同的。默认情况下，
+                    value1替换原有的value2。
+
+
+    说明：
+        情况1：将(key1, value1)存放到数组的索引i的位置
+        情况2、情况3：(key1, value1)元素与现有的(key2, value2)构成单向链表结构。(key1, value1)指向(key2, value2)
+
+    随着不断添加元素，在满足如下的条件的情况下，会考虑扩容。
+    if (size++ >= threshold) resize(2 * table.length); // threshold: 阙值、临界值
+    当元素的个数达到临界值（->数组的长度*加载因子）时，就考虑扩容。默认的临界值是 = 16 * 0.75 --> 12 // 加载因子一般0.75
+    默认扩容为原来的2倍。
+
+
+2.2 JDK8与JDK7的不同之处（以JDK1.8为例）
+
+2.3 属性/字段
