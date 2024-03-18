@@ -70,3 +70,11 @@
 
 
 2.3 属性/字段
+
+二、LinkedHashMap
+1. LinkedHashMap 与 HashMap的关系：
+LinkedHashMap 是 HashMap的子类。
+LinkedHashMap在HashMap使用的数组+单向链表+红黑树的基础上，又增加了一对双向链表，
+    记录添加的(key, value)的先后顺序，便于我们遍历所有的key-value。
+
+2. 底层结构

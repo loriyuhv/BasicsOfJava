@@ -2,10 +2,7 @@ package com.wsw03.map;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author loriyuhv
@@ -48,4 +45,30 @@ public class AHashMapDemo {
 
         map.put("AA", 123);
     }
+
+    @Test
+    public void test3(){
+        LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
+
+        map.put("Jerry", 78);
+        map.put("Jack", 75);
+        map.put("Tom", 88);
+
+        Set<Map.Entry<String, Integer>> entries = map.entrySet();
+        for (Map.Entry<String, Integer> entry : entries) {
+            System.out.println(entry);
+        }
+
+        Iterator<Map.Entry<String, Integer>> iterator = entries.iterator();
+        // iterator实例调用hasNext()方法作为while循环条件；
+        while(iterator.hasNext()) {
+            // 循环体内遍历输出iterator实例调用next()返回的结果。
+            System.out.println(iterator.next());
+        }
+
+        // Iterator接口提供遍历任何Collection的接口。我们从一个Collection中使用iterator
+        // 方法来获取iterator实例。
+        //
+    }
+
 }
