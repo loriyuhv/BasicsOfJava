@@ -14,11 +14,11 @@ public class AListTest {
 
     @Test
     public void test1() {
-        ArrayList<String> names = new ArrayList<>();
-        names.add("Jerry");
-        names.add("Tom");
-        for (String name : names) {
-            System.out.println(name);
-        }
+        // ArrayList<String> names = new ArrayList<>();
+        // names.add("Jerry");
+        // names.add("Tom");
+//        for (String name : names) {
+//            System.out.println(name);
+//        }
     }
 }

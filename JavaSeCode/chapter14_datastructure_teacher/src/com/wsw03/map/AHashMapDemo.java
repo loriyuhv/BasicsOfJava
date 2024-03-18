@@ -16,6 +16,17 @@ import java.util.Set;
 
 
 public class AHashMapDemo {
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("AA", 78);
+        map.put("BB", 88);
+        map.put("CC", 98);
+        map.put("Jerry", 98);
+        map.put("Tom", 98);
+        map.put("Jack", 98);
+        map.put("Alice", 98);
+
+    }
 
     @Test
     public void test() {
@@ -29,5 +40,12 @@ public class AHashMapDemo {
         while(iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+    }
+
+    @Test
+    public void test2() {
+        HashMap<String, Integer> map = new HashMap<>();
+
+        map.put("AA", 123);
     }
 }

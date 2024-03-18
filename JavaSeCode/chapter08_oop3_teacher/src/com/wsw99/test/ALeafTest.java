@@ -7,6 +7,7 @@ package com.wsw99.test;
  */
 
 class Root{
+    private String name;
     static{
         System.out.println("Root的静态初始化块");
     }
