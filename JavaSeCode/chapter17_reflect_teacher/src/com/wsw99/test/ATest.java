@@ -17,7 +17,7 @@ public class ATest {
             @Override
             public Class<?> loadClass(String name) throws ClassNotFoundException {
                 try {
-                    System.out.println("name:" + name);
+                    // 1）通过类的全名，获取类的二进制数据流
                     String fileName = name.substring(name.lastIndexOf(".") + 1) + ".class";
                     InputStream is = getClass().getResourceAsStream(fileName);
                     if (is == null) {
