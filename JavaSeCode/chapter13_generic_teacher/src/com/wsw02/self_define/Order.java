@@ -1,5 +1,8 @@
 package com.wsw02.self_define;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * @author loriyuhv
  * @ClassName Order
@@ -18,10 +21,12 @@ public class Order<T, E> {
         this.name = name;
     }
 
+    // 不是泛型方法
     public T getName() {
         return name;
     }
 
+    // 不是泛型方法
     public E getPrice() {
         return price;
     }
@@ -34,103 +39,23 @@ public class Order<T, E> {
         this.name = name;
     }
 
+    /**
+     * @description 自定义泛型方法
+     */
+    public <G> G method(G g) {
+        return null;
+    }
+
+    // 定义泛型方法，将E[]数组元素添加到对应类型的ArrayList中，并返回
+    public <G> ArrayList<G> copyFromArrayToList(G[] arr) {
+        return new ArrayList<>(Arrays.asList(arr));
+    }
+
     @Override
     public String toString() {
         return "Order{" +
                 "name=" + name +
                 ", price=" + price +
                 '}';
-    }
-}
-
-// 以下是子类没有新增泛型
-
-/**
- * @description 子类不保留父类的泛型
- */
-class SubOrder extends Order<String, Object> {
-    private String description;
-
-    public SubOrder(String description) {
-        this.description = description;
-    }
-
-    public SubOrder(String name, String description) {
-        super(name);
-        this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "SubOrder{" +
-                "description='" + description + '\'' +
-                '}';
-    }
-}
-
-/** 
- * @description 子类不保留父类的泛型(子类不是泛型类)
- * 1) 没有类型，擦除
- */
-class SubOrder1 extends Order<Object, Object> {
-    public SubOrder1() {
-    }
-
-    public SubOrder1(Object name) {
-        super(name);
-    }
-}
-
-/**
- * @description 子类不保留父类的泛型(子类不是泛型类)
- * 2）具体类型
- */
-class SubOrder2 extends Order<String, Integer> {
-    public SubOrder2() {
-    }
-
-    public SubOrder2(String name) {
-        super(name);
-    }
-}
-
-/**
- * @description 子类保留父类的泛型（子类是泛型类）
- * 1）全部保留
- */
-class SubOrder3<T, E> extends Order<T, E> {
-    public SubOrder3() {
-    }
-
-    public SubOrder3(T name) {
-        super(name);
-    }
-}
-
-/**
- * @description 子类保留父类的泛型
- * 2）部分保留
- */
-class SubOrder4<T> extends Order<T, Double> {
-    public SubOrder4() {
-    }
-}
-
-// 以下是子类新增泛型
-
-/**
- * @description 子类不保留父类的泛型
- * 1）没有类型 擦除
- */
-class SubOrder5<T> extends Order<Object, Object> {
-    public SubOrder5() {
     }
 }

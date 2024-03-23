@@ -2,6 +2,9 @@ package com.wsw02.self_define;
 
 import org.junit.Test;
 
+import javax.management.OperationsException;
+import java.util.ArrayList;
+
 /**
  * @author loriyuhv
  * @ClassName GenericTest
@@ -80,24 +83,15 @@ public class GenericTest {
         System.out.println(order);
     }
 
-    /**
-     * @description 除创建泛型类对象外，子类继承泛型类时、实现类
-     * 实现泛型接口时，也可以确定泛型结构中的泛型参数。
+    // 子类不保留父类的泛型
+    /** 
+     * @description 子类不保留父类的泛型（子类没有泛型）
+     * 1）没有类型，擦除
      */
     @Test
     public void test5(){
-        SubOrder jerry = new SubOrder("Jerry", "This is Jerry.");
-        String name = jerry.getName();
-        System.out.println(jerry);
-    }
-    
-    /** 
-     * @description 子类不保留父类类型：1）没有类型，擦除
-     */
-    @Test
-    public void test6(){
-        SubOrder1 apple = new SubOrder1("apple");
-        Object name = apple.getName();
+        SubOrder1 apple = new SubOrder1();
+        apple.setName("apple");
         System.out.println(apple);
     }
 
@@ -106,10 +100,10 @@ public class GenericTest {
      * 2）具体类型
      */
     @Test
-    public void test7(){
-        SubOrder2 apple = new SubOrder2("apple");
-        String name = apple.getName();
-        System.out.println(name);
+    public void test6(){
+        SubOrder2 apple = new SubOrder2();
+        apple.setName("apple");
+        System.out.println(apple);
     }
 
     /**
@@ -117,7 +111,7 @@ public class GenericTest {
      * 1）全部保留
      */
     @Test
-    public void test8(){
+    public void test7(){
         SubOrder3<String, Double> order = new SubOrder3<>();
         order.setName("grape");
         order.setPrice(18.8);
@@ -129,57 +123,69 @@ public class GenericTest {
      * 2）部分保留
      */
     @Test
-    public void test9(){
+    public void test8(){
         SubOrder4<String> order = new SubOrder4<>();
         order.setName("purple");
         order.setPrice(9.99);
         System.out.println(order);
     }
 
+    /**
+     * @description 子类不保留父类的泛型(子类泛型参数是新增)
+     * 1）没有类型 擦除
+     */
+    @Test
+    public void test9(){
+        SubOrder5<String> order = new SubOrder5<>();
+        order.setDescription("these is sub_order5.");
+        System.out.println(order);
+    }
 
+    /**
+     * @description 子类不保留父类的泛型(子类泛型参数是新增)
+     * 2）子类不保留父类的泛型
+     */
+    @Test
+    public void test10(){
+        SubOrder6<String> order = new SubOrder6<>();
+        String name = order.getName();
+        Double price = order.getPrice();
+        order.setDescription("sub_order6");
+        System.out.println(order);
+    }
 
-//    /**
-//     * @description 测试Order子类Information使用泛型
-//     */
-//    @Test
-//    public void test3(){
-//        Information<String, Integer> apple = new Information<>("apple", "This is an apple.");
-//        apple.name = "apples";
-//        apple.description = "these apples are sweet.";
-//        System.out.println(apple);
-//        apple.displayPrice(15);
-//    }
-//
-//    /**
-//     * @description 测试Order子类SubOrder使用父类泛型
-//     */
-//    @Test
-//    public void test4(){
-//        // 实例化SubOrder
-//        SubOrder subOrder = new SubOrder();
-//        Object age = subOrder.getAge();
-//
-//        // 因为SubOrder不是泛型类，此处编译错误
-//        // SubOrder<String> subOrder = new SubOrder<>();
-//    }
-//
-//    /**
-//     * @description 测试Order子类SubOrder2使用父类泛型
-//     */
-//    @Test
-//    public void test5(){
-//        SubOrder2 subOrder2 = new SubOrder2();
-//        String age = subOrder2.getAge();
-//
-//    }
-//
-//    /**
-//     * @description 测试Order子类SubOrder3使用泛型参数，以及定义父类泛型参数为String
-//     */
-//    @Test
-//    public void test6(){
-//        SubOrder4<Integer> apple = new SubOrder4<>("apple", 99);
-//        System.out.println(apple);
-//        System.out.println(apple.getDescription().getClass());
-//    }
+    /**
+     * @description 子类不保留父类的泛型(子类泛型参数是新增)
+     * 1)全部保留
+     */
+    @Test
+    public void test11(){
+        SubOrder7<String, Double, String> order = new SubOrder7<>();
+        order.setName("apple");
+        order.setPrice(19.9);
+        order.setDescription("this is an apple.");
+        System.out.println(order);
+    }
+
+    /**
+     * @description 子类不保留父类的泛型(子类泛型参数是新增)
+     * 1)部分保留
+     */
+    @Test
+    public void test12(){
+        SubOrder8<String, String> order = new SubOrder8<>();
+        String name = order.getName();
+        Double price = order.getPrice();
+        String description = order.getDescription();
+        System.out.println(name + price + description);
+    }
+
+    @Test
+    public void test13(){
+        Order<String, Integer> order = new Order<>();
+        ArrayList<Integer> integers = order.copyFromArrayToList(new Integer[]{1, 2, 3, 4, 5});
+        for (Integer integer : integers) {
+            System.out.println(integer);
+        }
+    }
 }
