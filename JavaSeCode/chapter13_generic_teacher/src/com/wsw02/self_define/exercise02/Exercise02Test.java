@@ -2,6 +2,7 @@ package com.wsw02.self_define.exercise02;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -66,6 +67,7 @@ public class Exercise02Test {
         users.save("22013040215", user3);
         System.out.println("-----------------save方法----------------");
         System.out.println(users);
-        users.lists();
+        ArrayList<User> lists = users.lists();
+        System.out.println(lists);
     }
 }

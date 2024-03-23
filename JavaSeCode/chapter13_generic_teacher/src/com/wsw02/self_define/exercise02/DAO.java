@@ -52,16 +52,21 @@ public class DAO<T> {
         return list;
     }
 
-    public void lists() {
+    public ArrayList<T> lists() {
         // 错误的
         // Collection<T> values = user.values();
         //System.out.println(values.getClass());
         //List<T> list = (List<T>) values; // 不能转换
         // 正确的方式1
-        ArrayList<User> users = new ArrayList<>();
+        //ArrayList<User> users = new ArrayList<>();
+        //Collection<T> values = user.values();
+        //users.addAll((Collection<? extends User>) values);
+        //System.out.println(users);
+
+        // 正确的方式2
         Collection<T> values = user.values();
-        users.addAll((Collection<? extends User>) values);
-        System.out.println(users);
+        ArrayList<T> users = new ArrayList<>(values);
+        return users;
     }
 
     /**
