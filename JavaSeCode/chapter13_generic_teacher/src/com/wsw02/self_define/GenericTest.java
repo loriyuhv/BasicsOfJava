@@ -112,9 +112,28 @@ public class GenericTest {
         System.out.println(name);
     }
 
+    /**
+     * @description 子类保留父类的泛型
+     * 1）全部保留
+     */
     @Test
     public void test8(){
+        SubOrder3<String, Double> order = new SubOrder3<>();
+        order.setName("grape");
+        order.setPrice(18.8);
+        System.out.println(order);
+    }
 
+    /**
+     * @description 子类保留父类的泛型
+     * 2）部分保留
+     */
+    @Test
+    public void test9(){
+        SubOrder4<String> order = new SubOrder4<>();
+        order.setName("purple");
+        order.setPrice(9.99);
+        System.out.println(order);
     }
 
 
