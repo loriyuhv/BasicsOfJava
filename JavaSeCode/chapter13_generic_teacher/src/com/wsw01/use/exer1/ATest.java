@@ -51,8 +51,10 @@ class MyDate implements Comparable<MyDate>{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof MyDate myDate)) return false;
+        if (this == o)
+            return true;
+        if (!(o instanceof MyDate myDate))
+            return false;
         return year == myDate.year && month == myDate.month && day == myDate.day;
     }
 

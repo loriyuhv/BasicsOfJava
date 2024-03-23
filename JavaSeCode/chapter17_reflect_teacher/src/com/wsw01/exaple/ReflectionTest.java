@@ -86,11 +86,7 @@ public class ReflectionTest {
     @Test
     public void test4() {
         Person person = new Person();
-        if (person.getClass() == Person.class) {
-            System.out.println("Hello world!!!");
-        }
-        System.out.println(person.getClass());
-        System.out.println(Person.class);
+        System.out.println(Person.class == person.getClass());
 
     }
 }

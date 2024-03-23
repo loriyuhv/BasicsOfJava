@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/chapter13_generic_teacher/chapter13_generic_teacher.iml" filepath="$PROJECT_DIR$/chapter13_generic_teacher/chapter13_generic_teacher.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter14_datastructure/chapter14_datastructure.iml" filepath="$PROJECT_DIR$/chapter14_datastructure/chapter14_datastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter14_datastructure_teacher/chapter14_datastructure_teacher.iml" filepath="$PROJECT_DIR$/chapter14_datastructure_teacher/chapter14_datastructure_teacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter17_reflect/chapter17_reflect.iml" filepath="$PROJECT_DIR$/chapter17_reflect/chapter17_reflect.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter17_reflect_teacher/chapter17_reflect_teacher.iml" filepath="$PROJECT_DIR$/chapter17_reflect_teacher/chapter17_reflect_teacher.iml" />
       <module fileurl="file://$PROJECT_DIR$/z_test/z_test.iml" filepath="$PROJECT_DIR$/z_test/z_test.iml" />
     </modules>

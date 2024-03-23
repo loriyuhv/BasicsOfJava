@@ -8,10 +8,13 @@ import java.util.*;
 /**
  * @author loriyuhv
  * @date 2024/3/16
- * @description TODO
+ * @description 在集合中泛型的使用和不使用
  */
 
 public class ACollectionMapTest {
+    /**
+     * @description 不使用泛型
+     */
     @Test
     public void test1() {
         // 添加学生成绩，成绩一般浮点型，保留两位数
@@ -37,7 +40,7 @@ public class ACollectionMapTest {
      */
     @Test
     public void test2() {
-        List<Integer> students = new ArrayList<Integer>();
+        List<Integer> students = new ArrayList<>();
 
         students.add(85);
         students.add(90);
