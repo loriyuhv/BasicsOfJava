@@ -6,7 +6,7 @@ import java.util.*;
  * @author loriyuhv
  * @ClassName Dao
  * @date 2024/3/23 20:32
- * @description TODO
+ * @description 对对象模型进行操作
  */
 
 public class DAO<T> {
