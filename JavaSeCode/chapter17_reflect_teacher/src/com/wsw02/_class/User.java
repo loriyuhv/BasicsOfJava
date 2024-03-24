@@ -7,6 +7,9 @@ package com.wsw02._class;
  */
 
 public class User implements Fly {
+    static {
+        System.out.println("Hello User");
+    }
     private String[] hobbies;
 
     @Override

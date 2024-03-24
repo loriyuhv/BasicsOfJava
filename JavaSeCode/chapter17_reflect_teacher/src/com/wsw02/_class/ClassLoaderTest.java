@@ -1,6 +1,10 @@
 package com.wsw02._class;
 
+import com.sun.xml.internal.ws.addressing.WsaActionUtil;
 import org.junit.Test;
+
+import java.io.*;
+import java.util.Properties;
 
 /**
  * @author loriyuhv
@@ -39,5 +43,35 @@ public class ClassLoaderTest {
         ClassLoader classLoader1 = clazz2.getClassLoader();
         System.out.println(classLoader1);
 
+    }
+
+    /**
+     * @description 需求：通过ClassLoader加载指定的配置文件
+     */
+    @Test
+    public void test3() throws IOException {
+        Properties pros = new Properties();
+        // 通过类的加载器读取的文件的默认路径为：当前module下src下
+        InputStream resourceAsStream = ClassLoader.getSystemClassLoader().getResourceAsStream("info.properties");
+        pros.load(resourceAsStream);
+        String name = pros.getProperty("name");
+        String password = pros.getProperty("password");
+        System.out.println(name + "=" + password);
+    }
+
+    /**
+     * @description Properties: 处理属性文件
+     */
+    @Test
+    public void test4() throws IOException {
+
+        Properties pros = new Properties();
+        // 通过类的加载器读取的文件的默认路径为：当前module
+        FileInputStream fis = new FileInputStream(new File("info.properties"));
+
+        pros.load(fis);
+        String name = pros.getProperty("name");
+        String password = pros.getProperty("password");
+        System.out.println(name + ":" + password);
     }
 }

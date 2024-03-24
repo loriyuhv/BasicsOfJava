@@ -71,6 +71,13 @@ public class ClassTest {
             System.out.println(interfaces[i]);
         }
 
+    }
 
+    @Test
+    public void test4(){
+        Class<User> userClass = User.class;
+        ClassLoader classLoader = userClass.getClassLoader();
+        User user = new User();
+        System.out.println();
     }
 }
