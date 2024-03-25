@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaSeCode.iml" filepath="$PROJECT_DIR$/JavaSeCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter08_oop1_teacher/chapter08_oop1_teacher.iml" filepath="$PROJECT_DIR$/chapter08_oop1_teacher/chapter08_oop1_teacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter08_oop2/chapter08_oop2.iml" filepath="$PROJECT_DIR$/chapter08_oop2/chapter08_oop2.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter08_oop2_teacher/chapter08_oop2_teacher.iml" filepath="$PROJECT_DIR$/chapter08_oop2_teacher/chapter08_oop2_teacher.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter08_oop3_teacher/chapter08_oop3_teacher.iml" filepath="$PROJECT_DIR$/chapter08_oop3_teacher/chapter08_oop3_teacher.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter09_exception_teacher/chapter09_exception_teacher.iml" filepath="$PROJECT_DIR$/chapter09_exception_teacher/chapter09_exception_teacher.iml" />
