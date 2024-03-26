@@ -14,7 +14,7 @@ public class Animal extends Creature{
 
     public Animal(String name, int age) {
         this(name);
-        System.out.println("Animal带两个参数的构造器，其age为" + age);
+        System.out.println("Animal带两个参数的构造器，为" + age);
     }
 }
 
